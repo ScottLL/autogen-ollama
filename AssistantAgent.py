@@ -6,7 +6,7 @@ from autogen import ConversableAgent  # Use this for the teachable agent
 
 config_list_llama2 = [
     {
-        'base_url': "http://0.0.0.0:43790",  # Adjust as necessary
+        'base_url': "http://0.0.0.0:27054",  # Adjust as necessary
         'api_key': "NULL",
         'model': "ollama/llama2"
     }
@@ -22,7 +22,7 @@ config_list_mistral = [
 
 config_list_codellama= [
     {
-        'base_url' : "http://0.0.0.0:2824",
+        'base_url' : "http://0.0.0.0:45684",
         'api_key' : "NULL",
         'model': "ollama/codellama"
     }
@@ -82,7 +82,7 @@ user_proxy = autogen.UserProxyAgent(
 
 
 task="""
-teach me how to build an AI autogen agent to dealing with the feedback data
+base on the conversation you have, create an UI interface for me to show this conversation you have, directly create the code for me, using fastAPI. 
 """
 
 groupchat = autogen.GroupChat(agents=[user_proxy, coder, assistant, teachable_agent], messages=[], max_round=12)
